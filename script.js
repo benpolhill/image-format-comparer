@@ -1,22 +1,29 @@
-let fileName = {
+let fileNameObj = {
     quality: 'q60',
     colour: 'rgb', 
     blur: 'b0',
     format: 'jpg'
 };
-console.log("init fileName:");
-console.log(fileName);
+console.log("init fileNameObj:");
+console.log(fileNameObj);
 
 document.addEventListener('click', el => {
+    if (el.target.type !== "radio") return;
     console.log(el.target);
+    let key = el.target.name;
     let value = el.target.id;
-    let name = el.target.name;
-    console.log(`${name} is ${value}!`);
+    // If the clicked key is in the object, change its value to value
+    Object.keys(fileNameObj).forEach(k => {
+        console.log(`Key: ${k}`);
+        k === key ? console.log('KEYS MATCH') : null;
+    });
+
+    console.log(`${key} is ${value}!`);
     let imgFile = 
-        `${name == 'quality' ? value : fileName.quality}_`+
-        `${name == 'colour' ? value : fileName.colour}_`+
-        `${name == 'blur' ? value : fileName.blur}.`+
-        `${name == 'format' ? value : fileName.format}`;
+        `${key == 'quality' ? value : fileNameObj.quality}_`+
+        `${key == 'colour' ? value : fileNameObj.colour}_`+
+        `${key == 'blur' ? value : fileNameObj.blur}.`+
+        `${key == 'format' ? value : fileNameObj.format}`;
     console.log(imgFile);
     document.getElementById('main-img').setAttribute('src', `images/${imgFile}`);
 });
