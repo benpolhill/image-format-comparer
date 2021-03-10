@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>WebP Image Comparison</title>
+</head>
+<body>
+    <img id="main-img" src="images/q60_rgb_.jpg">
+   
+    <div class="radio-group" id="format-group">
+        <h2>Format</h2>
+        <input type="radio" name="format" id="jpg" name="jpg" checked>
+        <label for="jpg">JPG</label>
+        <input type="radio" name="format" id="webp" name="webp">
+        <label for="webp">WebP</label>
+    </div>
+
+    <div class="radio-group" id="quality-group">
+        <h2>Quality</h2>
+        <input type="radio" name="quality" id="q60" name="q60" checked>
+        <label for="q60">60</label>
+        <input type="radio" name="quality" id="q20" name="q20">
+        <label for="q20">20</label>
+    </div>
+
+    <div class="radio-group" id="colour-group">
+        <h2>Colour</h2>
+        <input type="radio" name="colour" id="rgb" name="rgb" checked>
+        <label for="rgb">RGB</label>
+        <input type="radio" name="colour" id="grey" name="grey">
+        <label for="grey">Grey</label>
+        <input type="radio" name="colour" id="greyer" name="greyer">
+        <label for="greyer">Greyer</label>
+    </div>
+
+    <div class="radio-group" id="blur-group">
+        <h2>Blur</h2>
+        <input type="radio" name="blur" id="b0" name="b0" checked>
+        <label for="b0">None</label>
+        <input type="radio" name="blur" id="b5" name="b5">
+        <label for="b5">5px</label>
+        <input type="radio" name="blur" id="b10" name="b10">
+        <label for="b10">10px</label>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
