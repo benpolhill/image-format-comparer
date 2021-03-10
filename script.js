@@ -13,10 +13,10 @@ document.addEventListener('click', el => {
     let name = el.target.name;
     console.log(`${name} is ${value}!`);
     let imgFile = 
-        `${name == 'quality' ? value : filename.quality}_`+
-        `${name == 'colour' ? value : filename.colour}_`+
-        `${name == 'blur' ? value : filename.blur}.`+
-        `${name == 'format' ? value : filename.format}`;
+        `${name == 'quality' ? value : fileName.quality}_`+
+        `${name == 'colour' ? value : fileName.colour}_`+
+        `${name == 'blur' ? value : fileName.blur}.`+
+        `${name == 'format' ? value : fileName.format}`;
     console.log(imgFile);
     document.getElementById('main-img').setAttribute('src', `images/${imgFile}`);
 });
