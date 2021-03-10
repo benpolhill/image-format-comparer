@@ -1,5 +1,11 @@
-let quality = 'q60', colour = 'rgb', blur = 'b0';
-let format ='jpg';
+let fileName = {
+    quality: 'q60',
+    colour: 'rgb', 
+    blur: 'b0',
+    format: 'jpg'
+};
+console.log("init fileName:");
+console.log(fileName);
 
 document.addEventListener('click', el => {
     console.log(el.target);
