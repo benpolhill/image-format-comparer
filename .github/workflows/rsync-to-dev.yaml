@@ -1,11 +1,11 @@
-name: build-dev
+name: rsync-to-dev
 on:
   push:
     branches:
-    - develop
+    - main
 
 jobs:
-  build-dev:
+  rsync-to-dev:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
