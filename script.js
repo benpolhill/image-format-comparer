@@ -1,3 +1,9 @@
+import { statSync } from 'fs';
+
+var stats = statSync("images/q20_grey_b0.jpg");
+var fileSizeInBytes = stats.size;
+console.log(fileSizeInBytes);
+
 let fileNameObj = {
     quality: 'q60',
     colour: 'rgb', 
