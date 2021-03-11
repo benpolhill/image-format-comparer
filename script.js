@@ -1,8 +1,8 @@
-import { statSync } from 'fs';
+const sizesJson = `./sizes.json`;
 
-var stats = statSync("images/q20_grey_b0.jpg");
-var fileSizeInBytes = stats.size;
-console.log(fileSizeInBytes);
+fetch(sizesJson)
+    .then(response => response.json())
+    .then(data => console.log(data));
 
 let fileNameObj = {
     quality: 'q60',
