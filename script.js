@@ -11,14 +11,16 @@ document.addEventListener('click', el => {
     if (el.target.type !== "radio") return;
     console.log(el.target);
     let key = el.target.name;
-    let value = el.target.id;
+    let value = el.target.value;
+    console.log(`${key} is ${value}!`);
     // If the clicked key is in the object, change its value to value
     Object.keys(fileNameObj).forEach(k => {
         console.log(`Key: ${k}`);
-        k === key ? console.log('KEYS MATCH') : null;
+        k === key ? fileNameObj[k] = value : null;
     });
+    console.log('fileNameObj is now:');
+    console.log(fileNameObj);
 
-    console.log(`${key} is ${value}!`);
     let imgFile = 
         `${key == 'quality' ? value : fileNameObj.quality}_`+
         `${key == 'colour' ? value : fileNameObj.colour}_`+
