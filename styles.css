@@ -39,6 +39,7 @@ body {
 #main-img-container {
   width: 100vw;
   position: relative;
+  max-width: 1400px;
 }
 
 #main-img-container #main-img {
