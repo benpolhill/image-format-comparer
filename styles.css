@@ -9,8 +9,12 @@ body {
   color: white;
 }
 
+.radio-controls-container {
+  padding: 0 2rem;
+}
+
 .radio-group {
-  padding: .5rem 2rem 2rem 0;
+  padding: 0 2rem 2rem 0;
   display: inline-block;
 }
 
