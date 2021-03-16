@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v2
       # Comment to explain line below
       # - run: sh ./getsizes.sh
-      - run scp ./styles.css root@dev.tate.digital:/home/tatedev/tests
+      - run: scp ./styles.css root@dev.tate.digital:/home/tatedev/tests
