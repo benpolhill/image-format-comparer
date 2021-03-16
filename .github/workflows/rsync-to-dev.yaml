@@ -14,7 +14,7 @@ jobs:
         with:
           switches: -avvzr --exclude=".*" --delete
           path: ./
-          remote_path: /var/www/html/dept2/webp
-          remote_host: dept2.co
+          remote_path: /home/tatedev/tests/image-compare
+          remote_host: dev.tate.digital
           remote_user: root
           remote_key: ${{ secrets.DEPLOY_KEY }} 
