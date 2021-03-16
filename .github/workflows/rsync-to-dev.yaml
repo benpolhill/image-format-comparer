@@ -8,6 +8,7 @@ jobs:
   rsync-to-dev:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       # - uses: appleboy/scp-action@master
       #   with:
       #     host: ${{ secrets.DEPLOY_HOST }}
@@ -20,7 +21,7 @@ jobs:
       - uses: burnett01/rsync-deployments@4.1
         with:
             switches: -avvv --exclude=".*"
-            path: ./images/
+            path: images/
             remote_path: /var/www/html/dept2/webp/
             remote_host: ${{ secrets.DEPLOY_HOST }}
             remote_user: ${{ secrets.DEPLOY_USER }}
