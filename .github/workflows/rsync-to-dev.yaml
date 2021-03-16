@@ -14,5 +14,6 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           # port: ${{ secrets.DEPLOY_PORT }}
           key: ${{ secrets.DEPLOY_KEY }}
-          source: "/.*"
-          target: "/home/tatedev/tests/image-compare/"
+          source: "styles.sass"
+          target: "/var/www/html/dept2/webp/"
+          # target: "/home/tatedev/tests/image-compare/"
