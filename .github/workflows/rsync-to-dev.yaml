@@ -20,7 +20,7 @@ jobs:
       - uses: burnett01/rsync-deployments@4.1
         with:
             switches: -avvvzr --delete --exclude=".*"
-            path: images/
+            path: /images
             remote_path: /var/www/html/dept2/webp/
             remote_host: ${{ secrets.DEPLOY_HOST }}
             remote_user: ${{ secrets.DEPLOY_USER }}
