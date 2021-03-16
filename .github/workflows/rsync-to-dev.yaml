@@ -19,7 +19,7 @@ jobs:
           # target: "/home/tatedev/tests/image-compare/"
       - uses: burnett01/rsync-deployments@4.1
         with:
-            switches: -avvvzr --delete --exclude=".*"
+            switches: -avvvzr --exclude=".*"
             # path: /images
             remote_path: /var/www/html/dept2/webp/
             remote_host: ${{ secrets.DEPLOY_HOST }}
