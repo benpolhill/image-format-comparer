@@ -16,8 +16,8 @@ jobs:
           # port: ${{ secrets.DEPLOY_PORT }}
           key: ${{ secrets.DEPLOY_KEY }}
           source: "images/*.jpg, images/*.webp"
-          target: "/var/www/html/dept2/webp/"
-          # target: "/home/tatedev/tests/image-compare/"
+          # target: "/var/www/html/dept2/webp/"
+          target: "/home/tatedev/tests/image-compare/"
       # - uses: burnett01/rsync-deployments@4.1
       #   with:
       #       switches: -avvv --exclude=".*"
