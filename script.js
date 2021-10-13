@@ -8,6 +8,9 @@ async function getSizesJson(file) {
     const data = await response.json();
     const sizeMsg = document.querySelector("#main-img-size .value");
     Object.keys(data).forEach(k => {
+        //k = k.substring(k.lastIndexOf("/") + 1);
+        console.log(k);
+        console.log(file);
         if (file === k) {
             console.log(`File ${k} is ${data[k]} bytes`);
             sizeMsg.innerHTML = `${Math.round(data[k] / 1000)} <span>KB</span>`;
@@ -31,5 +34,5 @@ document.addEventListener('click', el => {
    
     document.getElementById('main-img').setAttribute('src', `images/${imgFile}`);
 
-    getSizesJson(imgFile);
+    getSizesJson(`images/${imgFile}`);
 });
